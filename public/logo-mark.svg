@@ -1,0 +1,86 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 200" role="img" aria-label="ChimmerJim mark">
+  <title>ChimmerJim mark</title>
+  <desc>Heritage shield with brick chimney, roof peaks, and the gold CJ monogram.</desc>
+  <defs>
+    <linearGradient id="mParch" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#f7eddb"/>
+      <stop offset="1" stop-color="#e9dbbb"/>
+    </linearGradient>
+    <linearGradient id="mBrick" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#b53028"/>
+      <stop offset="1" stop-color="#7e1c17"/>
+    </linearGradient>
+    <linearGradient id="mGold" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#f5cf6a"/>
+      <stop offset="1" stop-color="#c8961e"/>
+    </linearGradient>
+    <clipPath id="mChimneyClip">
+      <rect x="78" y="56" width="44" height="86"/>
+    </clipPath>
+  </defs>
+
+  <!-- Smoke -->
+  <g fill="none" stroke="#0f2540" stroke-width="4.5" stroke-linecap="round">
+    <path d="M90 40 C 86 30 100 26 96 16 C 95 13 101 11 104 14"/>
+    <path d="M108 44 C 104 34 118 30 114 20 C 113 16 119 14 122 17"/>
+  </g>
+
+  <!-- Shield -->
+  <path d="M20 66 Q20 52 34 52 L166 52 Q180 52 180 66 L180 160 Q180 170 170 170 L30 170 Q20 170 20 160 Z"
+        fill="url(#mParch)" stroke="#1e3a5f" stroke-width="4.5"/>
+  <path d="M30 62 L170 62 L170 160 L30 160 Z"
+        fill="none" stroke="#c8961e" stroke-width="1.2" opacity="0.85"/>
+
+  <!-- Chimney crown -->
+  <rect x="70" y="42" width="60" height="9" rx="1" fill="#0f2540"/>
+  <rect x="76" y="35" width="48" height="8" rx="1" fill="#1e3a5f"/>
+  <rect x="78" y="48" width="44" height="10" fill="#1e3a5f"/>
+
+  <!-- Brick chimney body -->
+  <g clip-path="url(#mChimneyClip)">
+    <rect x="78" y="56" width="44" height="86" fill="url(#mBrick)"/>
+    <g stroke="#f3e6c8" stroke-width="1.5" opacity="0.95">
+      <line x1="74" y1="68"  x2="126" y2="68"/>
+      <line x1="74" y1="80"  x2="126" y2="80"/>
+      <line x1="74" y1="92"  x2="126" y2="92"/>
+      <line x1="74" y1="104" x2="126" y2="104"/>
+      <line x1="74" y1="116" x2="126" y2="116"/>
+      <line x1="74" y1="128" x2="126" y2="128"/>
+    </g>
+    <g stroke="#f3e6c8" stroke-width="1.5" opacity="0.9">
+      <line x1="93"  y1="56"  x2="93"  y2="68"/>
+      <line x1="107" y1="56"  x2="107" y2="68"/>
+      <line x1="86"  y1="68"  x2="86"  y2="80"/>
+      <line x1="100" y1="68"  x2="100" y2="80"/>
+      <line x1="114" y1="68"  x2="114" y2="80"/>
+      <line x1="93"  y1="80"  x2="93"  y2="92"/>
+      <line x1="107" y1="80"  x2="107" y2="92"/>
+      <line x1="86"  y1="92"  x2="86"  y2="104"/>
+      <line x1="100" y1="92"  x2="100" y2="104"/>
+      <line x1="114" y1="92"  x2="114" y2="104"/>
+      <line x1="93"  y1="104" x2="93"  y2="116"/>
+      <line x1="107" y1="104" x2="107" y2="116"/>
+      <line x1="86"  y1="116" x2="86"  y2="128"/>
+      <line x1="100" y1="116" x2="100" y2="128"/>
+      <line x1="114" y1="116" x2="114" y2="128"/>
+      <line x1="93"  y1="128" x2="93"  y2="142"/>
+      <line x1="107" y1="128" x2="107" y2="142"/>
+    </g>
+  </g>
+
+  <!-- Roof peaks -->
+  <path d="M28 170 L78 138 L78 170 Z" fill="#1e3a5f"/>
+  <path d="M172 170 L122 138 L122 170 Z" fill="#1e3a5f"/>
+  <rect x="142" y="154" width="7" height="10" rx="1" fill="#f3e6c8"/>
+  <line x1="145.5" y1="154" x2="145.5" y2="164" stroke="#1e3a5f" stroke-width="0.5"/>
+  <line x1="142" y1="159" x2="149" y2="159" stroke="#1e3a5f" stroke-width="0.5"/>
+  <rect x="20" y="166" width="160" height="4" fill="#0f2540"/>
+
+  <!-- CJ monogram -->
+  <circle cx="100" cy="174" r="22" fill="#0f2540"/>
+  <circle cx="100" cy="174" r="19" fill="url(#mGold)" stroke="#0f2540" stroke-width="1"/>
+  <circle cx="100" cy="174" r="14.5" fill="#f7eddb" stroke="#0f2540" stroke-width="0.8"/>
+  <text x="100" y="182" text-anchor="middle"
+        font-family="Georgia, 'Times New Roman', serif"
+        font-weight="900" font-size="19" fill="#0f2540" letter-spacing="-0.8">CJ</text>
+</svg>

@@ -1,0 +1,58 @@
+{
+  "services": [
+    {
+      "id": "chimney-cleaning",
+      "title": "Chimney Cleaning & Sweeping",
+      "shortDescription": "Remove dangerous creosote buildup and debris to keep your chimney safe and efficient.",
+      "fullDescription": "Our CSIA-certified technicians perform thorough chimney sweeps that remove creosote, soot, and blockages. We use professional-grade equipment to leave your flue clean and ready for safe use. Regular cleaning prevents chimney fires and carbon monoxide buildup.",
+      "icon": "🧹",
+      "popular": true,
+      "duration": "1–2 hours"
+    },
+    {
+      "id": "chimney-inspection",
+      "title": "Chimney Inspection",
+      "shortDescription": "Level I, II, and III inspections to identify cracks, damage, and safety hazards.",
+      "fullDescription": "We offer all three NFPA 211 inspection levels. Level I for routine checks, Level II (with video scan) for real estate transactions or after events, and Level III for major damage assessment. Every inspection comes with a detailed written report.",
+      "icon": "🔍",
+      "popular": true,
+      "duration": "1–3 hours"
+    },
+    {
+      "id": "chimney-repair",
+      "title": "Chimney Repair",
+      "shortDescription": "Tuckpointing, crown repair, brick replacement, and more to restore structural integrity.",
+      "fullDescription": "From hairline cracks to major structural damage, our masons repair chimneys right the first time. Services include tuckpointing and repointing, crown repair and replacement, spalling brick replacement, and full chimney rebuilds.",
+      "icon": "🔧",
+      "popular": true,
+      "duration": "Half-day to multi-day"
+    },
+    {
+      "id": "waterproofing",
+      "title": "Chimney Waterproofing",
+      "shortDescription": "Protect your chimney from water infiltration with professional-grade sealants.",
+      "fullDescription": "Water is a chimney's worst enemy. We apply vapor-permeable waterproofing sealants that block moisture from entering while allowing gases to escape. Prevents spalling, efflorescence, and interior water damage.",
+      "icon": "💧",
+      "popular": false,
+      "duration": "2–4 hours"
+    },
+    {
+      "id": "chimney-cap",
+      "title": "Chimney Cap & Damper Install",
+      "shortDescription": "Stop rain, animals, and debris with a new cap or top-sealing damper.",
+      "fullDescription": "A properly fitted chimney cap is your first line of defense. We supply and install stainless steel and copper caps, top-mounted dampers, and animal guards. Most installs completed same day.",
+      "icon": "🏠",
+      "popular": false,
+      "duration": "1–2 hours"
+    },
+    {
+      "id": "fireplace-repair",
+      "title": "Fireplace Repair & Relining",
+      "shortDescription": "Firebox rebuilds, liner installation, and smoke chamber repairs.",
+      "fullDescription": "We repair damaged fireboxes, install stainless steel or cast-in-place flue liners, and resurface smoke chambers with proper parging. Liner installation dramatically improves draft and protects your masonry.",
+      "icon": "🔥",
+      "popular": false,
+      "duration": "Half-day to 2 days"
+    }
+  ]
+}

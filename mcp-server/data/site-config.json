@@ -1,0 +1,35 @@
+{
+  "business": {
+    "name": "ChimmerJim",
+    "tagline": "Your Local Chimney Experts — Trusted, Certified & Insured",
+    "phone": "(555) 247-4669",
+    "email": "info@chimmerjim.com",
+    "address": "123 Hearth Lane, Your City, ST 00000",
+    "hours": "Mon–Sat: 7am–6pm | Sun: Emergency calls only",
+    "licenseNumber": "CCR-00000",
+    "yearsInBusiness": 15
+  },
+  "hero": {
+    "headline": "Chimney Repair & Cleaning You Can Trust",
+    "subheadline": "Family-owned. Fully certified. Serving the area for 15 years.",
+    "ctaPrimary": "Get a Free Estimate",
+    "ctaSecondary": "See Our Services"
+  },
+  "seo": {
+    "siteTitle": "ChimmerJim — Chimney Repair & Cleaning Experts",
+    "metaDescription": "ChimmerJim offers professional chimney cleaning, repair, waterproofing, and inspection services. Certified technicians, free estimates, same-week scheduling.",
+    "keywords": ["chimney repair", "chimney cleaning", "chimney sweep", "fireplace repair", "chimney inspection"]
+  },
+  "social": {
+    "facebook": "",
+    "instagram": "",
+    "google": ""
+  },
+  "trustBadges": [
+    "Certified Chimney Professionals",
+    "Fully Insured & Licensed",
+    "15+ Years Experience",
+    "Free Estimates",
+    "Same-Week Service"
+  ]
+}

@@ -1,0 +1,125 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 420" role="img" aria-label="ChimmerJim">
+  <title>ChimmerJim</title>
+  <defs>
+    <linearGradient id="lParch" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#f7eddb"/>
+      <stop offset="1" stop-color="#e9dbbb"/>
+    </linearGradient>
+    <linearGradient id="lBrick" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#b53028"/>
+      <stop offset="1" stop-color="#7e1c17"/>
+    </linearGradient>
+    <linearGradient id="lGold" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#f5cf6a"/>
+      <stop offset="1" stop-color="#c8961e"/>
+    </linearGradient>
+    <clipPath id="lChimneyClip">
+      <rect x="155" y="78" width="90" height="142"/>
+    </clipPath>
+  </defs>
+
+  <!-- ── Smoke curls (above the shield) ─────────────────────── -->
+  <g fill="none" stroke="#1e3a5f" stroke-width="7" stroke-linecap="round">
+    <path d="M178 50 C 170 30 195 22 188 8 C 186 3 196 0 202 6"/>
+    <path d="M212 56 C 204 36 230 28 224 12 C 222 6 232 2 240 8"/>
+  </g>
+
+  <!-- ── Shield (parchment) ─────────────────────────────────── -->
+  <path d="M60 100 Q60 80 80 80 L320 80 Q340 80 340 100 L340 240 Q340 252 328 252 L72 252 Q60 252 60 240 Z"
+        fill="url(#lParch)" stroke="#1e3a5f" stroke-width="6"/>
+  <path d="M72 92 L328 92 L328 240 L72 240 Z"
+        fill="none" stroke="#c8961e" stroke-width="1.5" opacity="0.85"/>
+
+  <!-- ── Chimney crown (flared, breaks through the shield) ──── -->
+  <rect x="138" y="55" width="124" height="14" rx="1.5" fill="#0f2540"/>
+  <rect x="148" y="44" width="104" height="12" rx="1.5" fill="#1e3a5f"/>
+  <rect x="155" y="66" width="90" height="14" fill="#1e3a5f"/>
+
+  <!-- ── Brick chimney body ─────────────────────────────────── -->
+  <g clip-path="url(#lChimneyClip)">
+    <rect x="155" y="78" width="90" height="142" fill="url(#lBrick)"/>
+    <!-- Horizontal mortar courses -->
+    <g stroke="#f3e6c8" stroke-width="2" opacity="0.95">
+      <line x1="150" y1="98"  x2="250" y2="98"/>
+      <line x1="150" y1="118" x2="250" y2="118"/>
+      <line x1="150" y1="138" x2="250" y2="138"/>
+      <line x1="150" y1="158" x2="250" y2="158"/>
+      <line x1="150" y1="178" x2="250" y2="178"/>
+      <line x1="150" y1="198" x2="250" y2="198"/>
+    </g>
+    <!-- Running-bond vertical joints -->
+    <g stroke="#f3e6c8" stroke-width="2" opacity="0.9">
+      <!-- Row A (centered) -->
+      <line x1="185" y1="78"  x2="185" y2="98"/>
+      <line x1="215" y1="78"  x2="215" y2="98"/>
+      <!-- Row B (offset) -->
+      <line x1="170" y1="98"  x2="170" y2="118"/>
+      <line x1="200" y1="98"  x2="200" y2="118"/>
+      <line x1="230" y1="98"  x2="230" y2="118"/>
+      <!-- Row C -->
+      <line x1="185" y1="118" x2="185" y2="138"/>
+      <line x1="215" y1="118" x2="215" y2="138"/>
+      <!-- Row D -->
+      <line x1="170" y1="138" x2="170" y2="158"/>
+      <line x1="200" y1="138" x2="200" y2="158"/>
+      <line x1="230" y1="138" x2="230" y2="158"/>
+      <!-- Row E -->
+      <line x1="185" y1="158" x2="185" y2="178"/>
+      <line x1="215" y1="158" x2="215" y2="178"/>
+      <!-- Row F -->
+      <line x1="170" y1="178" x2="170" y2="198"/>
+      <line x1="200" y1="178" x2="200" y2="198"/>
+      <line x1="230" y1="178" x2="230" y2="198"/>
+      <!-- Row G -->
+      <line x1="185" y1="198" x2="185" y2="220"/>
+      <line x1="215" y1="198" x2="215" y2="220"/>
+    </g>
+  </g>
+
+  <!-- ── Roof peaks (dark) ──────────────────────────────────── -->
+  <path d="M70 252 L155 200 L155 252 Z" fill="#1e3a5f"/>
+  <path d="M330 252 L245 200 L245 252 Z" fill="#1e3a5f"/>
+  <!-- Right roof window detail -->
+  <rect x="282" y="225" width="11" height="15" rx="1.5" fill="#f3e6c8"/>
+  <line x1="287.5" y1="225" x2="287.5" y2="240" stroke="#1e3a5f" stroke-width="0.6"/>
+  <line x1="282" y1="232.5" x2="293" y2="232.5" stroke="#1e3a5f" stroke-width="0.6"/>
+  <!-- Bottom roof line -->
+  <rect x="60" y="248" width="280" height="6" fill="#0f2540"/>
+
+  <!-- ── CJ monogram badge (centered, bridges shield+banner) ── -->
+  <circle cx="200" cy="252" r="32" fill="#0f2540"/>
+  <circle cx="200" cy="252" r="28" fill="url(#lGold)" stroke="#0f2540" stroke-width="1.5"/>
+  <circle cx="200" cy="252" r="22" fill="#f7eddb" stroke="#0f2540" stroke-width="1"/>
+  <text x="200" y="264" text-anchor="middle"
+        font-family="Georgia, 'Times New Roman', serif"
+        font-weight="900" font-size="28" fill="#0f2540" letter-spacing="-1.2">CJ</text>
+
+  <!-- ── Banner (lower, with notched ends and bottom point) ── -->
+  <path d="M26 268 L374 268 L386 295 L374 322 L386 348 L356 380 L300 380 L200 408 L100 380 L44 380 L14 348 L26 322 L14 295 Z"
+        fill="url(#lParch)" stroke="#1e3a5f" stroke-width="6"/>
+  <path d="M40 280 L360 280 L370 295 L362 322 L370 345 L348 370 L300 370 L200 393 L100 370 L52 370 L30 345 L38 322 L30 295 Z"
+        fill="none" stroke="#c8961e" stroke-width="1.5" opacity="0.85"/>
+
+  <!-- ── Wordmark ───────────────────────────────────────────── -->
+  <text x="200" y="335" text-anchor="middle"
+        font-family="Georgia, 'Times New Roman', serif"
+        font-weight="900" font-size="52" letter-spacing="-1.5">
+    <tspan fill="#1e3a5f">Chimmer</tspan><tspan fill="#a02822">Jim</tspan>
+  </text>
+
+  <!-- Divider line under wordmark -->
+  <line x1="70" y1="348" x2="330" y2="348" stroke="#1e3a5f" stroke-width="1" opacity="0.4"/>
+
+  <!-- ── Tagline ────────────────────────────────────────────── -->
+  <text x="200" y="368" text-anchor="middle"
+        font-family="Georgia, 'Times New Roman', serif"
+        font-weight="700" font-size="14" letter-spacing="2.5" fill="#1e3a5f">
+    CHIMNEY REPAIR  ·  SWEEP  ·  REBUILDS
+  </text>
+
+  <!-- ── Star at bottom point ───────────────────────────────── -->
+  <g transform="translate(200,400)">
+    <path d="M0 -8 L2 -2 L8 0 L2 2 L0 8 L-2 2 L-8 0 L-2 -2 Z" fill="#c8961e"/>
+    <circle cx="0" cy="0" r="1.5" fill="#0f2540"/>
+  </g>
+</svg>

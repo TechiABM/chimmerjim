@@ -1,0 +1,32 @@
+{
+  "faqs": [
+    {
+      "question": "How often should I have my chimney cleaned?",
+      "answer": "The NFPA recommends chimneys be inspected at least once a year and cleaned as needed. If you use your fireplace regularly (more than a few times per week), annual cleaning is a must. Wood-burning fireplaces tend to build up creosote faster than gas fireplaces."
+    },
+    {
+      "question": "How do I know if my chimney needs repair?",
+      "answer": "Common signs include white staining (efflorescence) on the brick, crumbling mortar, water in your firebox, a damaged chimney crown, or a chimney cap that's missing or rusted. If you notice any of these, schedule an inspection before your next fire."
+    },
+    {
+      "question": "Is chimney cleaning messy?",
+      "answer": "Not with us! We use drop cloths, HEPA vacuums, and dust-control equipment to keep your home spotless. Most customers are surprised by how clean we leave the area."
+    },
+    {
+      "question": "Do you work on gas fireplaces?",
+      "answer": "Yes. While gas fireplaces produce less creosote, they still need annual inspections to check for blockages, liner integrity, and proper venting."
+    },
+    {
+      "question": "How long does a chimney cleaning take?",
+      "answer": "A standard chimney sweep takes 45–90 minutes. If we're combining it with a Level II inspection and video scan, plan for about 2 hours."
+    },
+    {
+      "question": "Are you certified?",
+      "answer": "Yes. Our technicians are certified by the Chimney Safety Institute of America (CSIA) and we are members of the National Chimney Sweep Guild (NCSG). We carry full liability insurance and workers' compensation coverage."
+    },
+    {
+      "question": "Do you offer free estimates?",
+      "answer": "We offer free estimates for all repair and installation work. Inspections and cleanings are priced upfront with no hidden fees."
+    }
+  ]
+}
