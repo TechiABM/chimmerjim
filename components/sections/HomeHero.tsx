@@ -58,7 +58,7 @@ export default function HomeHero({
       {/* ── Background photo — art-directed per breakpoint ── */}
       {/* Mobile portrait: priority-preloaded (most local-service traffic is mobile) */}
       <Image
-        src="/heroes/hero-home-mobile.png"
+        src="/heroes/hero-home-mobile.jpg"
         alt=""
         fill
         priority
@@ -68,7 +68,7 @@ export default function HomeHero({
       />
       {/* Desktop landscape: eager but no preload link — avoids double LCP penalty */}
       <Image
-        src="/heroes/hero-home-desktop.png"
+        src="/heroes/hero-home-desktop.jpg"
         alt=""
         fill
         loading="eager"
@@ -197,7 +197,7 @@ export default function HomeHero({
                 <div className="absolute inset-0 grid grid-cols-3 gap-1">
                   <div className="relative">
                     <Image
-                      src="/photos/crown-rebuild.png"
+                      src="/photos/crown-rebuild.jpg"
                       alt=""
                       fill
                       sizes="(min-width: 1024px) 12vw, 33vw"
@@ -215,7 +215,7 @@ export default function HomeHero({
                   </div>
                   <div className="relative">
                     <Image
-                      src="/photos/roofing-vent-install.png"
+                      src="/photos/roofing-vent-install.jpg"
                       alt=""
                       fill
                       sizes="(min-width: 1024px) 12vw, 33vw"

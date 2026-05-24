@@ -28,7 +28,7 @@ export default function Hero({
   bullets = [],
   locationPill,
   ctaLabel = "Call for a Free Estimate",
-  bgImage = "/heroes/hero-home-desktop.png",
+  bgImage = "/heroes/hero-home-desktop.jpg",
 }: HeroProps) {
   return (
     <section className="relative bg-brand text-white overflow-hidden min-h-[520px] flex items-center">

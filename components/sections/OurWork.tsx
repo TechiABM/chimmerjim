@@ -2,7 +2,7 @@ import Image from "next/image";
 
 const jobs = [
   {
-    src: "/photos/crown-rebuild.png",
+    src: "/photos/crown-rebuild.jpg",
     alt: "Chimney crown rebuild completed by ChimmerJim",
     label: "Crown Rebuild",
     sub: "Cracked crown replaced with water-resistant crown coat",
