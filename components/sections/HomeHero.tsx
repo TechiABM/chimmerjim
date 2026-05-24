@@ -55,8 +55,13 @@ export default function HomeHero({
 }: HomeHeroProps) {
   return (
     <section className="relative bg-brand text-white overflow-hidden">
+      {/* Explicit preloads — hoisted to <head> by Next.js App Router.
+          next/image with unoptimized+fill drops the preload silently; we add it manually.
+          media attribute ensures each device only preloads its image. */}
+      <link rel="preload" as="image" href="/heroes/hero-home-mobile.webp" type="image/webp" media="(max-width: 767px)" />
+      <link rel="preload" as="image" href="/heroes/hero-home-desktop.webp" type="image/webp" media="(min-width: 768px)" />
+
       {/* ── Background photo — art-directed per breakpoint ── */}
-      {/* Mobile: preloaded — drives LCP on mobile (majority of traffic) */}
       <Image
         src="/heroes/hero-home-mobile.webp"
         alt=""
@@ -66,7 +71,6 @@ export default function HomeHero({
         unoptimized
         className="md:hidden object-cover object-top"
       />
-      {/* Desktop: eager static fetch — no competing preload on mobile */}
       <Image
         src="/heroes/hero-home-desktop.webp"
         alt=""
