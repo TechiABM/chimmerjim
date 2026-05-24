@@ -56,9 +56,9 @@ export default function HomeHero({
   return (
     <section className="relative bg-brand text-white overflow-hidden">
       {/* ── Background photo — art-directed per breakpoint ── */}
-      {/* Mobile portrait: priority-preloaded (most local-service traffic is mobile) */}
+      {/* Mobile: preloaded — drives LCP on mobile (majority of traffic) */}
       <Image
-        src="/heroes/hero-home-mobile.jpg"
+        src="/heroes/hero-home-mobile.webp"
         alt=""
         fill
         priority
@@ -66,11 +66,12 @@ export default function HomeHero({
         unoptimized
         className="md:hidden object-cover object-top"
       />
+      {/* Desktop: eager static fetch — no competing preload on mobile */}
       <Image
-        src="/heroes/hero-home-desktop.jpg"
+        src="/heroes/hero-home-desktop.webp"
         alt=""
         fill
-        priority
+        loading="eager"
         fetchPriority="high"
         unoptimized
         className="hidden md:block object-cover object-center"

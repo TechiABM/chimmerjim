@@ -96,7 +96,7 @@ export default function PresetHero({ lander }: PresetHeroProps) {
     <section className={`relative ${theme.bg} text-white overflow-hidden`}>
       {/* Hero background image */}
       <Image
-        src="/heroes/hero-ads.jpg"
+        src="/heroes/hero-ads.webp"
         alt=""
         fill
         priority

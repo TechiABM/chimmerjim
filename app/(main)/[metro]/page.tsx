@@ -69,7 +69,7 @@ export default async function MetroPage({ params }: Props) {
         phone={phone}
         phoneDisplay={phoneDisplay}
         locationPill={m.displayName}
-        bgImage="/heroes/hero-metro.jpg"
+        bgImage="/heroes/hero-metro.webp"
         bullets={[
           `Serving ${m.cities.slice(0, 3).join(", ")} & more`,
           "NFPA-certified technicians",

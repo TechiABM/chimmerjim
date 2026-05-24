@@ -31,18 +31,16 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en" className={`${inter.variable} h-full`}>
-      <head>
-        {/* Deferred GTM — loads after user interaction, not blocking render */}
+      <body suppressHydrationWarning className="min-h-full flex flex-col antialiased">
+        {children}
+        {/* Deferred GTM — fires on first user interaction, moved to body end to not block FCP */}
         <script
           suppressHydrationWarning
           dangerouslySetInnerHTML={{
-            __html: `
-(function(){var loaded=false;function load(){if(loaded)return;loaded=true;(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src='https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f)})(window,document,'script','dataLayer','GTM-REPLACE_ME');['scroll','click','touchstart','keydown'].forEach(function(e){document.removeEventListener(e,load,{capture:true})});}['scroll','click','touchstart','keydown'].forEach(function(e){document.addEventListener(e,load,{capture:true,once:true,passive:true});});})();
-            `,
+            __html: `(function(){var loaded=false;function load(){if(loaded)return;loaded=true;(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src='https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f)})(window,document,'script','dataLayer','GTM-REPLACE_ME');['scroll','click','touchstart','keydown'].forEach(function(e){document.removeEventListener(e,load,{capture:true})});}['scroll','click','touchstart','keydown'].forEach(function(e){document.addEventListener(e,load,{capture:true,once:true,passive:true});});})();`,
           }}
         />
-      </head>
-      <body suppressHydrationWarning className="min-h-full flex flex-col antialiased">{children}</body>
+      </body>
     </html>
   );
 }

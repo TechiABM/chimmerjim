@@ -84,7 +84,7 @@ export default async function ServiceMetroPage({ params }: Props) {
         phone={phone}
         phoneDisplay={phoneDisplay}
         locationPill={`${s.name} · ${m.displayName}`}
-        bgImage="/heroes/hero-metro-service.jpg"
+        bgImage="/heroes/hero-metro-service.webp"
         bullets={s.signs.slice(0, 4).map((sign) => `Signs you need this: ${sign}`)}
         ctaLabel={`Call for ${s.shortName} Service`}
       />

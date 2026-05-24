@@ -72,7 +72,7 @@ export default async function ServicePage({ params }: Props) {
         subtitle={s.intro}
         phone={PHONE}
         phoneDisplay={PHONE_DISPLAY}
-        bgImage="/heroes/hero-service.jpg"
+        bgImage="/heroes/hero-service.webp"
         bullets={[
           `Service duration: ${s.duration}`,
           "NFPA-certified technicians",
