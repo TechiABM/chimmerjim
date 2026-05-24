@@ -39,7 +39,7 @@ export default function Hero({
         fill
         priority
         fetchPriority="high"
-        sizes="100vw"
+        unoptimized
         className="object-cover object-center"
       />
       {/* Navy overlay — photo reads as texture, not subject */}

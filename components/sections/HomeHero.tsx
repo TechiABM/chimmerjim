@@ -63,16 +63,16 @@ export default function HomeHero({
         fill
         priority
         fetchPriority="high"
-        sizes="100vw"
+        unoptimized
         className="md:hidden object-cover object-top"
       />
-      {/* Desktop landscape: eager but no preload link — avoids double LCP penalty */}
       <Image
         src="/heroes/hero-home-desktop.jpg"
         alt=""
         fill
-        loading="eager"
-        sizes="100vw"
+        priority
+        fetchPriority="high"
+        unoptimized
         className="hidden md:block object-cover object-center"
       />
       {/* Brand color washes — photo reads as texture */}
