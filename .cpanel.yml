@@ -1,0 +1,18 @@
+---
+deployment:
+  tasks:
+    - export PATH=/opt/cpanel/ea-nodejs22/bin:$PATH
+    - cd /home/evergvps001/repositories/chimmerjim
+    - npm ci
+    - npm run build
+    - rm -rf /home/evergvps001/chimmerjim-run-new
+    - mkdir -p /home/evergvps001/chimmerjim-run-new
+    - cp -a .next/standalone/. /home/evergvps001/chimmerjim-run-new/
+    - cp -a public /home/evergvps001/chimmerjim-run-new/public
+    - mkdir -p /home/evergvps001/chimmerjim-run-new/.next
+    - cp -a .next/static /home/evergvps001/chimmerjim-run-new/.next/static
+    - rm -rf /home/evergvps001/chimmerjim-run-old
+    - mv /home/evergvps001/chimmerjim-run /home/evergvps001/chimmerjim-run-old
+    - mv /home/evergvps001/chimmerjim-run-new /home/evergvps001/chimmerjim-run
+    - mkdir -p /home/evergvps001/chimmerjim-run/tmp
+    - touch /home/evergvps001/chimmerjim-run/tmp/restart.txt
