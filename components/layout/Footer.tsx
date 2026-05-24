@@ -22,7 +22,7 @@ export default function Footer({ phone = "8005553900", phoneDisplay = "(800) 555
           <div>
             <div className="mb-4">
               <Image
-                src="/logo.png"
+                src="/logo.webp" unoptimized
                 alt="ChimmerJim"
                 width={180}
                 height={48}

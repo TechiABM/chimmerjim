@@ -172,7 +172,7 @@ export default async function AdsLanderPage({ params }: Props) {
         <div className="max-w-md mx-auto">
           <div className="mb-2 flex justify-center">
             <Image
-              src="/logo.png"
+              src="/logo.webp" unoptimized
               alt="ChimmerJim"
               width={150}
               height={40}
