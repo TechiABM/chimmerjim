@@ -58,8 +58,8 @@ export default function HomeHero({
       {/* Explicit preloads — hoisted to <head> by Next.js App Router.
           next/image with unoptimized+fill drops the preload silently; we add it manually.
           media attribute ensures each device only preloads its image. */}
-      <link rel="preload" as="image" href="/heroes/hero-home-mobile.webp" type="image/webp" media="(max-width: 767px)" />
-      <link rel="preload" as="image" href="/heroes/hero-home-desktop.webp" type="image/webp" media="(min-width: 768px)" />
+      <link rel="preload" as="image" href="/heroes/hero-home-mobile.webp" type="image/webp" media="(max-width: 767px)" fetchPriority="high" />
+      <link rel="preload" as="image" href="/heroes/hero-home-desktop.webp" type="image/webp" media="(min-width: 768px)" fetchPriority="high" />
 
       {/* ── Background photo — art-directed per breakpoint ── */}
       <Image
@@ -202,27 +202,30 @@ export default function HomeHero({
                 <div className="absolute inset-0 grid grid-cols-3 gap-1">
                   <div className="relative">
                     <Image
-                      src="/photos/crown-rebuild.jpg"
+                      src="/photos/crown-rebuild.webp"
                       alt=""
                       fill
+                      unoptimized
                       sizes="(min-width: 1024px) 12vw, 33vw"
                       className="object-cover"
                     />
                   </div>
                   <div className="relative">
                     <Image
-                      src="/photos/chimney-caps-rusted.jpeg"
+                      src="/photos/chimney-caps-rusted.webp"
                       alt=""
                       fill
+                      unoptimized
                       sizes="(min-width: 1024px) 12vw, 33vw"
                       className="object-cover"
                     />
                   </div>
                   <div className="relative">
                     <Image
-                      src="/photos/roofing-vent-install.jpg"
+                      src="/photos/roofing-vent-install.webp"
                       alt=""
                       fill
+                      unoptimized
                       sizes="(min-width: 1024px) 12vw, 33vw"
                       className="object-cover"
                     />
