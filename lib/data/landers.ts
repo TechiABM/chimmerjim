@@ -133,7 +133,7 @@ export const landers: AdsLander[] = [
     photos: [
       {
         src: "/photos/chimney-repair-dc-technicians.webp",
-        alt: "ChimmerJim NFPA-certified technicians performing chimney repair inspection on a Washington DC rowhouse rooftop",
+        alt: "ChimmerJim NFPA-certified technician actively repairing a brick chimney liner on a residential rooftop in Washington DC",
       },
     ],
     faqs: [
