@@ -1,8 +1,15 @@
+"use client";
+
 import Link from "next/link";
 import Image from "next/image";
+import { usePathname } from "next/navigation";
 import { Phone, MapPin } from "lucide-react";
 import { metros } from "@/lib/data/metros";
 import { services } from "@/lib/data/services";
+
+function fmtPhone(digits: string): string {
+  return `(${digits.slice(0, 3)}) ${digits.slice(3, 6)}-${digits.slice(6)}`;
+}
 
 interface FooterProps {
   phone?: string;
@@ -10,6 +17,12 @@ interface FooterProps {
 }
 
 export default function Footer({ phone = "8005553900", phoneDisplay = "(800) 555-3900" }: FooterProps) {
+  const pathname = usePathname();
+  const slug = pathname.split("/")[1];
+  const metro = metros.find((m) => m.slug === slug);
+  const effectivePhone = metro?.phone ?? phone;
+  const effectiveDisplay = metro ? fmtPhone(metro.phone) : phoneDisplay;
+
   const half = Math.ceil(metros.length / 2);
   const col1 = metros.slice(0, half);
   const col2 = metros.slice(half);
@@ -33,13 +46,13 @@ export default function Footer({ phone = "8005553900", phoneDisplay = "(800) 555
               Your neighborhood chimney experts. NFPA-certified, licensed &amp; insured across 23 metro areas.
             </p>
             <a
-              href={`tel:+1${phone}`}
+              href={`tel:+1${effectivePhone}`}
               data-dni="primary-phone"
               data-dni-href="primary-phone"
               className="flex items-center gap-2 text-accent font-semibold hover:text-amber transition-colors"
             >
               <Phone size={16} />
-              <span data-dni="primary-phone">{phoneDisplay}</span>
+              <span data-dni="primary-phone" suppressHydrationWarning dangerouslySetInnerHTML={{ __html: effectiveDisplay }} />
             </a>
             <p className="text-white/50 text-xs mt-3">
               Mon–Sat 7am–8pm · Sun 8am–6pm
