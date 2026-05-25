@@ -74,7 +74,6 @@ export default function Navbar({ phone = "8005553900", phoneDisplay = "(800) 555
           {/* Phone CTA */}
           <a
             href={`tel:+1${phone}`}
-            data-dni="primary-phone"
             data-dni-href="primary-phone"
             className="hidden md:flex items-center gap-2 bg-accent hover:bg-accent-dark text-white font-semibold px-4 py-2 rounded-lg transition-colors text-sm"
           >
@@ -99,10 +98,11 @@ export default function Navbar({ phone = "8005553900", phoneDisplay = "(800) 555
           <div className="px-4 py-4 space-y-2">
             <a
               href={`tel:+1${phone}`}
+              data-dni-href="primary-phone"
               className="flex items-center gap-2 bg-accent text-white font-semibold px-4 py-3 rounded-lg w-full justify-center mb-4"
             >
               <Phone size={16} />
-              Call {phoneDisplay}
+              Call <span data-dni="primary-phone">{phoneDisplay}</span>
             </a>
             {services.map((s) => (
               <Link
