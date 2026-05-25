@@ -22,7 +22,7 @@ export default function TrustBadges() {
               </div>
               <div>
                 <p className="font-semibold text-sm text-white leading-tight">{b.label}</p>
-                <p className="text-xs text-white/40 mt-0.5">{b.sub}</p>
+                <p className="text-xs text-white/60 mt-0.5">{b.sub}</p>
               </div>
             </div>
           ))}

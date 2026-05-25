@@ -82,8 +82,8 @@ export default function Footer({ phone = "8005553900", phoneDisplay = "(800) 555
 
           {/* Locations col 2 */}
           <div>
-            <h3 className="font-semibold text-amber mb-4 text-sm uppercase tracking-wider">&nbsp;</h3>
-            <ul className="space-y-2 mt-[1.625rem]">
+            <div aria-hidden="true" className="mb-4 h-[1.375rem]" />
+            <ul className="space-y-2">
               {col2.map((m) => (
                 <li key={m.slug}>
                   <Link
