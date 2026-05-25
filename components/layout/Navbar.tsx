@@ -1,10 +1,11 @@
 "use client";
 
 import { useState } from "react";
+import { usePathname } from "next/navigation";
 import Link from "next/link";
 import Image from "next/image";
 import { Menu, X, Phone, ChevronDown } from "lucide-react";
-import { cn } from "@/lib/utils";
+import { metros } from "@/lib/data/metros";
 
 const services = [
   { label: "Chimney Cleaning", href: "/services/chimney-cleaning" },
@@ -16,6 +17,10 @@ const services = [
   { label: "Dryer Vent Cleaning", href: "/services/dryer-vent-cleaning" },
 ];
 
+function fmtPhone(digits: string): string {
+  return `(${digits.slice(0, 3)}) ${digits.slice(3, 6)}-${digits.slice(6)}`;
+}
+
 interface NavbarProps {
   phone?: string;
   phoneDisplay?: string;
@@ -24,6 +29,13 @@ interface NavbarProps {
 export default function Navbar({ phone = "8005553900", phoneDisplay = "(800) 555-3900" }: NavbarProps) {
   const [open, setOpen] = useState(false);
   const [servicesOpen, setServicesOpen] = useState(false);
+  const pathname = usePathname();
+
+  // Derive metro phone from the current URL so CTM can swap the right number
+  const slug = pathname.split("/")[1];
+  const metro = metros.find((m) => m.slug === slug);
+  const effectivePhone = metro?.phone ?? phone;
+  const effectiveDisplay = metro ? fmtPhone(metro.phone) : phoneDisplay;
 
   return (
     <header className="bg-brand text-white sticky top-0 z-50 shadow-lg">
@@ -73,13 +85,13 @@ export default function Navbar({ phone = "8005553900", phoneDisplay = "(800) 555
 
           {/* Phone CTA */}
           <a
-            href={`tel:+1${phone}`}
+            href={`tel:+1${effectivePhone}`}
             data-dni="primary-phone"
             data-dni-href="primary-phone"
             className="hidden md:flex items-center gap-2 bg-accent hover:bg-accent-dark text-white font-semibold px-4 py-2 rounded-lg transition-colors text-sm"
           >
             <Phone size={16} />
-            <span data-dni="primary-phone" suppressHydrationWarning dangerouslySetInnerHTML={{ __html: phoneDisplay }} />
+            <span data-dni="primary-phone" suppressHydrationWarning dangerouslySetInnerHTML={{ __html: effectiveDisplay }} />
           </a>
 
           {/* Mobile hamburger */}
@@ -98,13 +110,13 @@ export default function Navbar({ phone = "8005553900", phoneDisplay = "(800) 555
         <div className="md:hidden bg-brand-dark border-t border-white/10">
           <div className="px-4 py-4 space-y-2">
             <a
-              href={`tel:+1${phone}`}
+              href={`tel:+1${effectivePhone}`}
               data-dni="primary-phone"
               data-dni-href="primary-phone"
               className="flex items-center gap-2 bg-accent text-white font-semibold px-4 py-3 rounded-lg w-full justify-center mb-4"
             >
               <Phone size={16} />
-              Call <span data-dni="primary-phone" suppressHydrationWarning dangerouslySetInnerHTML={{ __html: phoneDisplay }} />
+              Call <span data-dni="primary-phone" suppressHydrationWarning dangerouslySetInnerHTML={{ __html: effectiveDisplay }} />
             </a>
             {services.map((s) => (
               <Link
