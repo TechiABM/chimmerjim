@@ -494,6 +494,209 @@ export const services: Service[] = [
     priceRange: "$120–$250",
     duration: "1–2 hours",
   },
+  {
+    slug: "fireplace-flue-cleaning",
+    name: "Fireplace & Flue Cleaning",
+    shortName: "Flue Cleaning",
+    icon: "🧹",
+    tagline: "Complete fireplace and flue cleaning — creosote, soot, and debris removed",
+    intro:
+      "ChimmerJim's fireplace and flue cleaning service thoroughly cleans your entire system from the firebox to the chimney cap. Our NFPA-certified technicians remove creosote, soot, and debris from the flue liner, smoke shelf, damper, and firebox using rotary brushes and HEPA-vacuum systems — leaving your fireplace clean, safe, and ready to use.",
+    signs: [
+      "Smoky smell inside the home when the fireplace isn't in use",
+      "Visible soot or creosote deposits on the damper or firebox walls",
+      "Last cleaning was more than 12 months ago",
+      "Smoke enters the room when you light a fire",
+      "Dark staining around the firebox opening",
+      "You burn wood fires regularly through the season",
+    ],
+    process: [
+      { step: "Flue camera check", detail: "We inspect the flue liner with a video camera to assess creosote buildup before cleaning." },
+      { step: "Firebox and hearth protection", detail: "Drop cloths protect your floors and furniture before any work begins." },
+      { step: "Cap and crown inspection", detail: "We inspect the chimney cap, crown, and flashing from the rooftop." },
+      { step: "Rotary brush flue cleaning", detail: "Rotary brushes clear creosote and soot from the flue liner top to bottom." },
+      { step: "Smoke shelf and damper cleaning", detail: "The smoke shelf, damper plate, and lower flue are thoroughly cleaned." },
+      { step: "HEPA vacuum capture", detail: "Industrial HEPA vacuums capture all debris so no soot enters your living space." },
+      { step: "Written report", detail: "You receive a post-cleaning summary with any findings that need attention." },
+    ],
+    sections: [
+      {
+        title: "Why Fireplace and Flue Cleaning Is a Safety Issue",
+        content:
+          "The NFPA identifies failure to clean chimneys as a leading cause of chimney fires. Creosote — the byproduct of burning wood — accumulates in stages. Stage 1 is dusty and brushable. Stage 3 is glazed, highly flammable, and nearly impossible to remove without chemical treatment. Annual cleaning keeps your fireplace operating safely by removing buildup before it reaches dangerous levels.",
+      },
+      {
+        title: "What We Clean",
+        content:
+          "Our service covers the complete flue system: the flue liner from cap to firebox, the smoke shelf above the damper, the damper plate, the firebox walls and floor, and the ash pit if present. If we find Stage 3 creosote, we advise on chemical treatment options before further use.",
+      },
+      {
+        title: "NFPA Standards We Follow",
+        content:
+          "ChimmerJim follows NFPA 211 guidelines for chimney and fireplace maintenance. Our technicians are NFPA-trained and carry full liability insurance. We recommend annual cleaning for wood-burning fireplaces and every 2–3 years for gas systems used regularly.",
+      },
+    ],
+    faqs: [
+      { q: "How often should I have my fireplace and flue cleaned?", a: "Annually for wood-burning fireplaces per NFPA guidelines. Gas fireplaces benefit from cleaning every 2–3 years depending on usage." },
+      { q: "Will the cleaning make a mess in my home?", a: "No. We use drop cloths and industrial HEPA vacuums that capture all soot and debris before it enters your living space." },
+      { q: "How long does a fireplace and flue cleaning take?", a: "Most appointments take 1–2 hours for a standard single-flue system." },
+      { q: "Can you clean a fireplace that hasn't been used in years?", a: "Yes. Long-unused fireplaces often have debris, animal nests, and deteriorated mortar that should be addressed before any fires are lit." },
+      { q: "Do you also inspect during the cleaning?", a: "Yes — we include a basic inspection with every cleaning. If we identify issues that require a Level 2 video inspection, we'll advise you on next steps." },
+      { q: "Do you need to go on the roof?", a: "Typically yes — we access the chimney from both the rooftop and the firebox to ensure a complete clean." },
+    ],
+    priceRange: "$150–$300",
+    duration: "1–2 hours",
+  },
+  {
+    slug: "chimney-services",
+    name: "Chimney Services",
+    shortName: "Services",
+    icon: "🏠",
+    tagline: "Full-service chimney cleaning, inspection, repair, and more",
+    intro:
+      "ChimmerJim provides a complete range of chimney services — from annual cleaning and NFPA-certified inspection to structural repair, liner replacement, cap installation, and waterproofing. One call covers every chimney need, with NFPA-trained technicians available same-day across all service areas.",
+    signs: [
+      "You haven't had any chimney service in the past 12 months",
+      "You notice smoke, smell, or sounds from the chimney",
+      "Water stains near the chimney on ceilings or walls",
+      "Visible cracks, spalling bricks, or deteriorated mortar",
+      "Animals or debris entering through the chimney",
+      "You're buying, selling, or have just moved into a home",
+    ],
+    process: [
+      { step: "Assessment call", detail: "We discuss your chimney's symptoms and history to recommend the right service." },
+      { step: "On-site inspection", detail: "A technician inspects your full chimney system before any work is performed." },
+      { step: "Cleaning (if needed)", detail: "Creosote, soot, and debris are removed from flue to firebox." },
+      { step: "Repair scope", detail: "Any structural, masonry, or component issues are documented with a quote." },
+      { step: "Approved repairs", detail: "Repairs are carried out per your approval — crown, liner, cap, tuckpointing, waterproofing." },
+      { step: "Final check", detail: "We verify all work and provide a written report with photos." },
+    ],
+    sections: [
+      {
+        title: "All Chimney Services Under One Roof",
+        content:
+          "Rather than calling different contractors for cleaning, inspection, and repair, ChimmerJim handles the full scope. Our technicians are trained across all chimney service types — so if cleaning reveals a liner crack or a failing crown, we can address it on the same visit or schedule a follow-up without switching companies.",
+      },
+      {
+        title: "Routine vs. Emergency Service",
+        content:
+          "We handle both scheduled annual maintenance and urgent chimney problems. If you're dealing with a chimney fire aftermath, sudden smoke intrusion, or animal entry, our team can respond quickly. Regular maintenance visits include cleaning, Level 1 inspection, and a condition report so you're never caught off guard.",
+      },
+    ],
+    faqs: [
+      { q: "What chimney services do you offer?", a: "Cleaning, Level 1/2/3 inspection, repair (crown, flashing, mortar, bricks), liner installation, cap installation, waterproofing, gas fireplace service, and dryer vent cleaning." },
+      { q: "Can you handle both cleaning and repair in one visit?", a: "Yes. We often combine cleaning with minor repairs in a single appointment to save you time." },
+      { q: "How quickly can you schedule a chimney service?", a: "We offer same-day and next-day appointments in most service areas." },
+      { q: "Do you service gas fireplaces as well as wood-burning?", a: "Yes — we service all fireplace types including wood-burning, gas, and electric systems." },
+      { q: "Are your technicians certified?", a: "Yes. ChimmerJim technicians are NFPA-trained, licensed, and insured." },
+    ],
+    priceRange: "$99–$5,000+",
+    duration: "Varies by service",
+  },
+  {
+    slug: "emergency-chimney-repair",
+    name: "Emergency Chimney Repair",
+    shortName: "Emergency Repair",
+    icon: "🚨",
+    tagline: "Fast response for chimney damage, leaks, and post-fire emergencies",
+    intro:
+      "When a chimney problem can't wait, ChimmerJim responds fast. Our emergency chimney repair service addresses urgent damage — post-fire structural issues, active water leaks into the home, collapsed crowns, fallen masonry, and compromised flashing — with same-day or next-day appointments across all service areas.",
+    signs: [
+      "Active water leak into the firebox, attic, or interior walls",
+      "Chimney fire has occurred recently",
+      "Bricks or masonry have fallen from the chimney",
+      "Crown has collapsed or separated",
+      "Smoke or CO alarm triggered during fireplace use",
+      "Visible structural damage after a storm",
+    ],
+    process: [
+      { step: "Emergency assessment", detail: "We inspect the full chimney immediately to identify all damage and safety hazards." },
+      { step: "Hazard containment", detail: "Immediate steps are taken to prevent further water intrusion or structural risk." },
+      { step: "Repair scope", detail: "We document all damage and provide a clear, itemized quote before work begins." },
+      { step: "Priority repairs", detail: "Critical repairs — crown, flashing, structural masonry — are completed as the top priority." },
+      { step: "Waterproofing and sealing", detail: "After structural repairs, affected masonry is sealed to prevent further water infiltration." },
+      { step: "Final inspection", detail: "All repairs are verified with a camera and visual inspection before sign-off." },
+    ],
+    sections: [
+      {
+        title: "When to Call for Emergency Chimney Repair",
+        content:
+          "Not every chimney issue is an emergency, but some are. A chimney fire — even a small one — requires immediate professional inspection before the fireplace is used again. Active water leaks during or after rain can cause rapid damage to framing and insulation. Fallen masonry near entry points is a safety hazard. If any of these apply, call ChimmerJim immediately rather than scheduling a routine appointment.",
+      },
+      {
+        title: "Common Emergency Chimney Repairs",
+        content:
+          "Crown repairs are the most frequent emergency — a fully cracked or collapsed crown allows unrestricted water entry. Flashing failure at the chimney-to-roof junction causes leaks that appear as ceiling stains or wet attic insulation. Post-chimney-fire liner inspection and repair is required by NFPA standards before resuming use. Fallen bricks at the chimney stack require immediate stabilization.",
+      },
+      {
+        title: "Documentation for Insurance Claims",
+        content:
+          "ChimmerJim provides written reports with before-and-after photographs for all emergency repairs. Our documentation is accepted by most homeowner insurance carriers for claim submission. If you've experienced storm damage or a chimney fire, our report provides the evidence your adjuster needs.",
+      },
+    ],
+    faqs: [
+      { q: "Can I use my fireplace after a chimney fire?", a: "No — not until a Level 2 inspection confirms the liner and structure are intact. Even small chimney fires can crack the liner in ways that create a fire hazard for the next use." },
+      { q: "How quickly can you respond to an emergency?", a: "We offer same-day emergency appointments in most service areas. Call us directly for fastest dispatch." },
+      { q: "Will my homeowner's insurance cover chimney repair?", a: "Coverage depends on your policy and the cause of damage. Storm damage and fire aftermath are commonly covered. We provide documentation to support your claim." },
+      { q: "My chimney is leaking during rain — is that an emergency?", a: "Yes. Active water intrusion should be addressed immediately. Water can damage framing, insulation, and interior finishes rapidly if not contained." },
+      { q: "Can you do temporary repairs to stop water intrusion fast?", a: "Yes. We can apply emergency tarping and sealant measures to halt water entry while permanent repairs are scheduled." },
+      { q: "Do you repair chimney damage from storms?", a: "Yes — fallen caps, cracked crowns, separated flashing, and dislodged masonry from storm events are all within our emergency repair scope." },
+    ],
+    priceRange: "$300–$5,000+",
+    duration: "Same-day–2 days",
+  },
+  {
+    slug: "chimney-cap-crown-repair",
+    name: "Chimney Cap & Crown Repair",
+    shortName: "Cap & Crown",
+    icon: "🔧",
+    tagline: "Stop water damage at the source — cap and crown repair by certified technicians",
+    intro:
+      "The chimney cap and crown are your chimney's primary defense against water intrusion. ChimmerJim repairs and replaces cracked crowns, installs new stainless steel chimney caps, and seals deteriorated crown coat — stopping leaks before they damage your liner, damper, and interior structure.",
+    signs: [
+      "Visible cracks in the concrete crown at the top of the chimney",
+      "Cap is rusted, broken, or missing entirely",
+      "Water entering the firebox during or after rain",
+      "Animals or birds getting into the chimney",
+      "White efflorescence staining on the brick below the crown",
+      "Downdrafts or wind-driven rain coming down the flue",
+    ],
+    process: [
+      { step: "Rooftop assessment", detail: "We inspect the cap, crown, and upper masonry to identify all damage." },
+      { step: "Cap removal", detail: "Existing damaged or missing cap is removed and the flue top is measured." },
+      { step: "Crown repair or rebuild", detail: "Cracked crowns are repaired with hydraulic crown coat or fully rebuilt if structurally compromised." },
+      { step: "Crown sealing", detail: "After repair, the crown surface is sealed with a water-repellent, flexible elastomeric coating." },
+      { step: "New cap installation", detail: "A custom-fit stainless steel cap is anchored securely over the flue opening(s)." },
+      { step: "Screen and spark arrest check", detail: "Cap mesh is verified to meet local spark arrestor requirements." },
+    ],
+    sections: [
+      {
+        title: "Why the Crown and Cap Fail",
+        content:
+          "The chimney crown — the concrete slab that covers the top of the chimney structure around the flue — is exposed to UV, freeze-thaw cycles, and rain year-round. Most crowns develop hairline cracks within 5–10 years that widen over time. Without a cap, rain falls directly into the flue. Together, a failed crown and missing cap allow water to penetrate deep into the masonry and liner, causing damage that compounds each season.",
+      },
+      {
+        title: "Cap vs. Crown — What's the Difference",
+        content:
+          "The crown is the concrete or mortar slab at the top of the chimney structure. It slopes away from the flue to shed water. The cap is the metal cover that sits over the flue opening itself, preventing rain, debris, and animals from entering. Both work together — a repaired crown without a proper cap still allows water and animal entry, and a cap alone won't stop water infiltrating through a cracked crown.",
+      },
+      {
+        title: "Materials We Use",
+        content:
+          "Crown repairs use flexible, hydraulic crown coat material that bonds to existing concrete and expands and contracts with temperature changes — unlike rigid Portland cement, which cracks again quickly. Chimney caps are installed in 304 stainless steel as the standard; copper caps are available as a premium upgrade that develops a natural patina.",
+      },
+    ],
+    faqs: [
+      { q: "Can a cracked chimney crown be repaired, or does it need to be replaced?", a: "Minor to moderate cracking can be repaired with elastomeric crown coat. Severely deteriorated crowns with structural compromise are rebuilt with new mortar and crown material." },
+      { q: "How long does a crown repair last?", a: "A properly applied elastomeric crown coat repair typically lasts 10–15 years. We back crown repairs with a 5-year workmanship warranty." },
+      { q: "What type of chimney cap should I get?", a: "304 stainless steel is the standard for durability and rust resistance. Copper is premium and lasts indefinitely. We do not recommend galvanized steel caps — they rust within a few years in most climates." },
+      { q: "My cap blew off in a storm — how quickly can you replace it?", a: "Same-day or next-day in most service areas. An uncapped flue is exposed to weather and animals, so we prioritize these calls." },
+      { q: "Does a chimney cap affect draft?", a: "A properly designed cap improves draft stability by reducing downdraft turbulence. It does not restrict airflow." },
+      { q: "Can I see the damage before you do any work?", a: "Yes — we photograph all damage at the rooftop and show you the images before recommending any repairs." },
+    ],
+    priceRange: "$250–$1,200",
+    duration: "2–4 hours",
+  },
 ];
 
 export function getServiceBySlug(slug: string): Service | undefined {
