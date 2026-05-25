@@ -44,6 +44,10 @@ export interface AdsLander {
   areasServed?: string[];
   /** 2–3 review snippets (QS: proof beyond star count). */
   reviews?: LanderReview[];
+  /** Override <title> tag for SEM keyword alignment (falls back to h1). */
+  metaTitle?: string;
+  /** Work-proof photos shown in the body (QS: original visual proof). */
+  photos?: { src: string; alt: string }[];
 }
 
 export const landers: AdsLander[] = [
@@ -123,6 +127,13 @@ export const landers: AdsLander[] = [
         name: "Susan K.",
         location: "Arlington, VA",
         text: "Half a dozen bricks were spalling on our 1940s chimney. ChimmerJim repointed the mortar joints and replaced the damaged bricks. The work looks original. Highly recommend for older DC-area homes.",
+      },
+    ],
+    metaTitle: "Chimney Repair Washington DC | Same-Day | ChimmerJim",
+    photos: [
+      {
+        src: "/photos/chimney-repair-dc-technicians.webp",
+        alt: "ChimmerJim NFPA-certified technicians performing chimney repair inspection on a Washington DC rowhouse rooftop",
       },
     ],
     faqs: [

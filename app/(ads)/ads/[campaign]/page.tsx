@@ -25,13 +25,22 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
   const { campaign } = await params;
   const l = getLanderByCampaign(campaign);
   if (!l) return {};
-  const title = l.h1;
+  const title = l.metaTitle ?? l.h1;
   const description = l.heroSubtitle.slice(0, 155);
+  const ogImage = l.photos?.[0]
+    ? { url: `https://chimmerjim.com${l.photos[0].src}`, alt: l.photos[0].alt, width: 1200, height: 800 }
+    : undefined;
   return {
     title,
     description,
+    keywords: `${l.keyword}, chimney repair, chimney service, ${l.city}`,
     alternates: { canonical: `https://chimmerjim.com/ads/${campaign}` },
-    openGraph: { title, description, url: `https://chimmerjim.com/ads/${campaign}` },
+    openGraph: {
+      title,
+      description,
+      url: `https://chimmerjim.com/ads/${campaign}`,
+      ...(ogImage && { images: [ogImage] }),
+    },
     robots: { index: false, follow: false },
   };
 }
@@ -130,6 +139,36 @@ export default async function AdsLanderPage({ params }: Props) {
 
       {/* ── How it works (QS: in-home service anxiety reduction) ──── */}
       <LanderProcess steps={l.processSteps} />
+
+      {/* ── Work proof photos (QS: original visual proof) ─────────── */}
+      {l.photos && l.photos.length > 0 && (
+        <section className="bg-white py-12 px-4">
+          <div className="max-w-2xl mx-auto">
+            <h2 className="text-xl sm:text-2xl font-bold text-brand mb-2 text-center">
+              Chimney Repair Work in {l.city}
+            </h2>
+            <p className="text-slate-500 text-sm text-center mb-6">
+              NFPA-certified repairs completed by our local technicians
+            </p>
+            <div className={`grid gap-4 ${l.photos.length === 1 ? "grid-cols-1" : "grid-cols-1 sm:grid-cols-2"}`}>
+              {l.photos.map((photo, i) => (
+                <div key={i} className="rounded-2xl overflow-hidden border border-slate-200 shadow-sm">
+                  <Image
+                    src={photo.src}
+                    alt={photo.alt}
+                    title={`Chimney Repair ${l.city} — ChimmerJim`}
+                    width={1200}
+                    height={800}
+                    unoptimized
+                    loading="lazy"
+                    className="w-full h-auto object-cover"
+                  />
+                </div>
+              ))}
+            </div>
+          </div>
+        </section>
+      )}
 
       {/* ── Mid-page CTA ───────────────────────────────────────────── */}
       <section className="relative bg-brand py-14 px-4 text-center text-white overflow-hidden">
