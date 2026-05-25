@@ -495,7 +495,7 @@ export const services: Service[] = [
     duration: "1–2 hours",
   },
   {
-    slug: "fireplace-flue-cleaning",
+    slug: "fireplace-flue-cleaning-sl",
     name: "Fireplace & Flue Cleaning",
     shortName: "Flue Cleaning",
     icon: "🧹",
@@ -548,7 +548,7 @@ export const services: Service[] = [
     duration: "1–2 hours",
   },
   {
-    slug: "chimney-services",
+    slug: "chimney-services-sl",
     name: "Chimney Services",
     shortName: "Services",
     icon: "🏠",
@@ -594,7 +594,7 @@ export const services: Service[] = [
     duration: "Varies by service",
   },
   {
-    slug: "emergency-chimney-repair",
+    slug: "emergency-chimney-repair-sl",
     name: "Emergency Chimney Repair",
     shortName: "Emergency Repair",
     icon: "🚨",
@@ -646,7 +646,7 @@ export const services: Service[] = [
     duration: "Same-day–2 days",
   },
   {
-    slug: "chimney-cap-crown-repair",
+    slug: "chimney-cap-crown-repair-sl",
     name: "Chimney Cap & Crown Repair",
     shortName: "Cap & Crown",
     icon: "🔧",
