@@ -1,6 +1,6 @@
 "use client";
 
-import { useState, useRef, useEffect } from "react";
+import { useState, useRef } from "react";
 import Link from "next/link";
 import Image from "next/image";
 import { Menu, X, Phone, ChevronDown } from "lucide-react";
@@ -26,11 +26,6 @@ export default function Navbar({ phone = "8005553900", phoneDisplay = "(800) 555
   const [servicesOpen, setServicesOpen] = useState(false);
   const desktopPhoneRef = useRef<HTMLSpanElement>(null);
   const mobilePhoneRef = useRef<HTMLSpanElement>(null);
-
-  useEffect(() => {
-    if (desktopPhoneRef.current) desktopPhoneRef.current.textContent = phoneDisplay;
-    if (mobilePhoneRef.current) mobilePhoneRef.current.textContent = phoneDisplay;
-  }, []);
 
   return (
     <header className="bg-brand text-white sticky top-0 z-50 shadow-lg">
