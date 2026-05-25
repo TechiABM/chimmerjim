@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import { Inter } from "next/font/google";
+import Script from "next/script";
 import "./globals.css";
 
 const inter = Inter({
@@ -33,6 +34,13 @@ export default function RootLayout({
     <html lang="en" className={`${inter.variable} h-full`}>
       <body suppressHydrationWarning className="min-h-full flex flex-col antialiased">
         {children}
+        {/* CTM DNI — loads after paint, swaps data-dni phone numbers */}
+        <Script src="https://cdn.chimmerjim.com/t.js" strategy="afterInteractive" />
+        {/* Omni-tracker — attribution layer, deferred */}
+        <Script
+          src="https://cdn.jsdelivr.net/gh/TechiABM/omni-tracker@main/omni-tracker-direct.js"
+          strategy="afterInteractive"
+        />
         {/* Deferred GTM — fires on first user interaction, moved to body end to not block FCP */}
         <script
           suppressHydrationWarning
