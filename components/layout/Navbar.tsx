@@ -1,6 +1,6 @@
 "use client";
 
-import { useState } from "react";
+import { useState, useRef, useEffect } from "react";
 import Link from "next/link";
 import Image from "next/image";
 import { Menu, X, Phone, ChevronDown } from "lucide-react";
@@ -24,6 +24,13 @@ interface NavbarProps {
 export default function Navbar({ phone = "8005553900", phoneDisplay = "(800) 555-3900" }: NavbarProps) {
   const [open, setOpen] = useState(false);
   const [servicesOpen, setServicesOpen] = useState(false);
+  const desktopPhoneRef = useRef<HTMLSpanElement>(null);
+  const mobilePhoneRef = useRef<HTMLSpanElement>(null);
+
+  useEffect(() => {
+    if (desktopPhoneRef.current) desktopPhoneRef.current.textContent = phoneDisplay;
+    if (mobilePhoneRef.current) mobilePhoneRef.current.textContent = phoneDisplay;
+  }, []);
 
   return (
     <header className="bg-brand text-white sticky top-0 z-50 shadow-lg">
@@ -78,7 +85,7 @@ export default function Navbar({ phone = "8005553900", phoneDisplay = "(800) 555
             className="hidden md:flex items-center gap-2 bg-accent hover:bg-accent-dark text-white font-semibold px-4 py-2 rounded-lg transition-colors text-sm"
           >
             <Phone size={16} />
-            <span data-dni="primary-phone">{phoneDisplay}</span>
+            <span ref={desktopPhoneRef} data-dni="primary-phone" suppressHydrationWarning />
           </a>
 
           {/* Mobile hamburger */}
@@ -102,7 +109,7 @@ export default function Navbar({ phone = "8005553900", phoneDisplay = "(800) 555
               className="flex items-center gap-2 bg-accent text-white font-semibold px-4 py-3 rounded-lg w-full justify-center mb-4"
             >
               <Phone size={16} />
-              Call <span data-dni="primary-phone">{phoneDisplay}</span>
+              Call <span ref={mobilePhoneRef} data-dni="primary-phone" suppressHydrationWarning />
             </a>
             {services.map((s) => (
               <Link
