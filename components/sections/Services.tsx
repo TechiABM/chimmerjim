@@ -60,16 +60,13 @@ export default function Services({
               href={href}
               className="group relative bg-white border border-slate-200 rounded-2xl p-6 flex flex-col transition-all duration-200 hover:border-accent/40 hover:shadow-[0_8px_32px_rgba(249,115,22,0.11)] hover:-translate-y-0.5"
             >
-              <span className="absolute top-4 right-4 text-[11px] font-semibold text-accent bg-orange-50 border border-accent/20 px-2 py-0.5 rounded-full leading-5">
-                {s.priceRange}
-              </span>
               <div className="w-11 h-11 rounded-xl bg-slate-100 group-hover:bg-orange-50 flex items-center justify-center mb-4 transition-colors duration-200 flex-shrink-0">
                 <Icon
                   size={21}
                   className="text-brand group-hover:text-accent transition-colors duration-200"
                 />
               </div>
-              <h3 className="font-semibold text-brand text-base mb-1.5 group-hover:text-accent transition-colors pr-20">
+              <h3 className="font-semibold text-brand text-base mb-1.5 group-hover:text-accent transition-colors">
                 {s.name}
               </h3>
               <p className="text-slate-500 text-sm leading-relaxed line-clamp-2 mb-4 flex-1">
