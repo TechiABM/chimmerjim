@@ -12,6 +12,12 @@ export default function sitemap(): MetadataRoute.Sitemap {
   // Homepage
   urls.push({ url: BASE, lastModified: now, changeFrequency: "weekly", priority: 1.0 });
 
+  // Static brand pages
+  urls.push({ url: `${BASE}/about`,   lastModified: now, changeFrequency: "monthly", priority: 0.6 });
+  urls.push({ url: `${BASE}/contact`, lastModified: now, changeFrequency: "monthly", priority: 0.8 });
+  urls.push({ url: `${BASE}/privacy`, lastModified: now, changeFrequency: "yearly",  priority: 0.3 });
+  urls.push({ url: `${BASE}/terms`,   lastModified: now, changeFrequency: "yearly",  priority: 0.3 });
+
   // Washington hub
   urls.push({ url: `${BASE}/washington`, lastModified: now, changeFrequency: "weekly", priority: 0.9 });
 
