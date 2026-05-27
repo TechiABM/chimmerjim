@@ -15,6 +15,7 @@ import FAQSchema from "@/components/schema/FAQSchema";
 import Breadcrumb from "@/components/ui/Breadcrumb";
 import { getMetroBySlug, getAllMetroSlugs } from "@/lib/data/metros";
 import { getServiceBySlug, getAllServiceSlugs } from "@/lib/data/services";
+import { getMetroServiceOverride } from "@/lib/data/metro-overrides";
 import { CheckCircle } from "lucide-react";
 
 type Props = { params: Promise<{ metro: string; service: string }> };
@@ -50,6 +51,7 @@ export default async function ServiceMetroPage({ params }: Props) {
   const s = getServiceBySlug(service);
   if (!m || !s) notFound();
 
+  const override = getMetroServiceOverride(metro, service);
   const phone = m.phone;
   const phoneDisplay = `(${phone.slice(0,3)}) ${phone.slice(3,6)}-${phone.slice(6)}`;
   const BASE = "https://chimmerjim.com";
@@ -76,7 +78,7 @@ export default async function ServiceMetroPage({ params }: Props) {
           { name: s.name, url: canonical },
         ]}
       />
-      <FAQSchema items={s.faqs} />
+      <FAQSchema items={[...s.faqs, ...(override?.extraFaqs ?? [])]} />
 
       <Hero
         h1={`${s.name} in ${m.fullName}`}
@@ -85,7 +87,7 @@ export default async function ServiceMetroPage({ params }: Props) {
         phoneDisplay={phoneDisplay}
         locationPill={`${s.name} · ${m.displayName}`}
         bgImage="/heroes/hero-metro-service.webp"
-        bullets={s.signs.slice(0, 4).map((sign) => `Signs you need this: ${sign}`)}
+        bullets={s.signs.slice(0, 4)}
         ctaLabel={`Call for ${s.shortName} Service`}
       />
 
@@ -95,12 +97,26 @@ export default async function ServiceMetroPage({ params }: Props) {
       {/* Service intro & signs */}
       <section className="py-14 bg-white">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+
+          {/* Metro-specific context */}
+          <div className="mb-8 bg-brand/5 border border-brand/10 rounded-xl p-4">
+            <p className="text-sm text-slate-600 leading-relaxed">
+              <span className="font-semibold text-brand">{m.fullName}: </span>
+              {m.weatherNote}
+            </p>
+          </div>
+
           <div className="grid md:grid-cols-2 gap-10">
             <div>
               <h2 className="text-xl font-bold text-brand mb-3">About {s.name}</h2>
-              <p className="text-slate-600 text-sm leading-relaxed mb-4">{s.intro}</p>
+              <p className="text-slate-600 text-sm leading-relaxed mb-4">
+                {override?.localIntro ?? s.intro}
+              </p>
               <p className="text-sm text-slate-500">
                 <strong>Duration:</strong> {s.duration}
+              </p>
+              <p className="text-sm text-slate-500 mt-1">
+                <strong>Price range:</strong> {s.priceRange}
               </p>
             </div>
             <div>
@@ -118,7 +134,7 @@ export default async function ServiceMetroPage({ params }: Props) {
 
           {/* Sections */}
           <div className="mt-10 space-y-8">
-            {s.sections.map((sec) => (
+            {[...s.sections, ...(override?.extraSections ?? [])].map((sec) => (
               <div key={sec.title}>
                 <h3 className="text-lg font-semibold text-brand mb-2">{sec.title}</h3>
                 <p className="text-slate-600 text-sm leading-relaxed">{sec.content}</p>
@@ -135,7 +151,7 @@ export default async function ServiceMetroPage({ params }: Props) {
 
       <WhyChooseUs heading={`Why ${m.fullName} Homeowners Choose ChimmerJim`} />
       <Testimonials />
-      <FAQ items={s.faqs} heading={`${s.name} FAQs`} />
+      <FAQ items={[...s.faqs, ...(override?.extraFaqs ?? [])]} heading={`${s.name} FAQs`} />
 
       {/* Related services */}
       <section className="py-12 bg-surface">

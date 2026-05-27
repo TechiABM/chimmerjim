@@ -35,7 +35,7 @@ export default function Footer({ phone = "8005553900", phoneDisplay = "(800) 555
           <div>
             <div className="mb-4">
               <Image
-                src="/logo.webp" unoptimized
+                src="/logo.webp"
                 alt="ChimmerJim"
                 width={180}
                 height={48}

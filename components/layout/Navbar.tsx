@@ -44,7 +44,7 @@ export default function Navbar({ phone = "8005553900", phoneDisplay = "(800) 555
           {/* Logo */}
           <Link href="/" className="flex items-center group" aria-label="ChimmerJim — home">
             <Image
-              src="/logo.webp" unoptimized
+              src="/logo.webp"
               alt="ChimmerJim"
               width={154}
               height={41}

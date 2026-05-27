@@ -101,7 +101,7 @@ export default function PresetHero({ lander }: PresetHeroProps) {
         fill
         priority
         fetchPriority="high"
-        unoptimized
+        sizes="100vw"
         className="object-cover object-center opacity-20"
       />
       <div className="absolute inset-0 bg-[radial-gradient(ellipse_80%_60%_at_100%_0%,#2d5282,transparent)] opacity-65 pointer-events-none" />

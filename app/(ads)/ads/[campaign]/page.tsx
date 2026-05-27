@@ -159,7 +159,6 @@ export default async function AdsLanderPage({ params }: Props) {
                     title={`Chimney Repair ${l.city} — ChimmerJim`}
                     width={1200}
                     height={800}
-                    unoptimized
                     loading="lazy"
                     className="w-full h-auto object-cover"
                   />
@@ -211,7 +210,7 @@ export default async function AdsLanderPage({ params }: Props) {
         <div className="max-w-md mx-auto">
           <div className="mb-2 flex justify-center">
             <Image
-              src="/logo.webp" unoptimized
+              src="/logo.webp"
               alt="ChimmerJim"
               width={150}
               height={40}

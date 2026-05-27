@@ -32,8 +32,6 @@ export default function Hero({
 }: HeroProps) {
   return (
     <section className="relative bg-brand text-white overflow-hidden min-h-[520px] flex items-center">
-      {/* Explicit preload — next/image with unoptimized+fill drops the preload silently */}
-      <link rel="preload" as="image" href={bgImage} type="image/webp" fetchPriority="high" />
       {/* Background photo */}
       <Image
         src={bgImage}
@@ -41,7 +39,7 @@ export default function Hero({
         fill
         priority
         fetchPriority="high"
-        unoptimized
+        sizes="100vw"
         className="object-cover object-center"
       />
       {/* Navy overlay — photo reads as texture, not subject */}

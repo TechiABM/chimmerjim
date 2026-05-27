@@ -1,4 +1,4 @@
-import Image from "next/image";
+import Image, { getImageProps } from "next/image";
 import {
   Phone,
   CheckCircle,
@@ -53,33 +53,41 @@ export default function HomeHero({
   ctaLabel = "Call for a Free Estimate",
   liveStatus = "Technicians available now — same-day slots open",
 }: HomeHeroProps) {
+  const { props: mobileImgProps } = getImageProps({
+    src: "/heroes/hero-home-mobile.webp",
+    alt: "",
+    width: 828,
+    height: 1200,
+    sizes: "100vw",
+    quality: 75,
+  });
+  const { props: desktopImgProps } = getImageProps({
+    src: "/heroes/hero-home-desktop.webp",
+    alt: "",
+    width: 1920,
+    height: 1080,
+    sizes: "100vw",
+    quality: 75,
+  });
+
   return (
     <section className="relative bg-brand text-white overflow-hidden">
-      {/* Explicit preloads — hoisted to <head> by Next.js App Router.
-          next/image with unoptimized+fill drops the preload silently; we add it manually.
-          media attribute ensures each device only preloads its image. */}
-      <link rel="preload" as="image" href="/heroes/hero-home-mobile.webp" type="image/webp" media="(max-width: 767px)" fetchPriority="high" />
-      <link rel="preload" as="image" href="/heroes/hero-home-desktop.webp" type="image/webp" media="(min-width: 768px)" fetchPriority="high" />
+      {/* Preloads — media-scoped so each device only fetches its own image */}
+      <link rel="preload" as="image" media="(max-width: 767px)" href={mobileImgProps.src} imageSrcSet={mobileImgProps.srcSet} imageSizes="100vw" fetchPriority="high" />
+      <link rel="preload" as="image" media="(min-width: 768px)" href={desktopImgProps.src} imageSrcSet={desktopImgProps.srcSet} imageSizes="100vw" fetchPriority="high" />
 
       {/* ── Background photo — art-directed per breakpoint ── */}
-      <Image
-        src="/heroes/hero-home-mobile.webp"
-        alt=""
-        fill
-        priority
-        fetchPriority="high"
-        unoptimized
-        className="md:hidden object-cover object-top"
-      />
-      <Image
-        src="/heroes/hero-home-desktop.webp"
-        alt=""
-        fill
-        loading="eager"
-        fetchPriority="high"
-        unoptimized
-        className="hidden md:block object-cover object-center"
-      />
+      <picture style={{ position: "absolute", inset: 0, width: "100%", height: "100%" }}>
+        <source media="(min-width: 768px)" srcSet={desktopImgProps.srcSet} sizes="100vw" />
+        <img
+          src={mobileImgProps.src}
+          srcSet={mobileImgProps.srcSet}
+          sizes="100vw"
+          alt=""
+          fetchPriority="high"
+          style={{ width: "100%", height: "100%", objectFit: "cover", objectPosition: "top" }}
+        />
+      </picture>
       {/* Brand color washes — photo reads as texture */}
       <div className="absolute inset-0 bg-brand/90" />
       <div className="absolute inset-0 bg-[radial-gradient(ellipse_70%_50%_at_85%_15%,rgba(45,82,130,0.65),transparent_70%)] pointer-events-none" />
@@ -205,7 +213,6 @@ export default function HomeHero({
                       src="/photos/crown-rebuild.webp"
                       alt=""
                       fill
-                      unoptimized
                       sizes="(min-width: 1024px) 12vw, 33vw"
                       className="object-cover"
                     />
@@ -215,7 +222,6 @@ export default function HomeHero({
                       src="/photos/chimney-caps-rusted.webp"
                       alt=""
                       fill
-                      unoptimized
                       sizes="(min-width: 1024px) 12vw, 33vw"
                       className="object-cover"
                     />
@@ -225,7 +231,6 @@ export default function HomeHero({
                       src="/photos/roofing-vent-install.webp"
                       alt=""
                       fill
-                      unoptimized
                       sizes="(min-width: 1024px) 12vw, 33vw"
                       className="object-cover"
                     />

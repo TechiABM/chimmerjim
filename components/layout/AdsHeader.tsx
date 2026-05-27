@@ -11,7 +11,7 @@ export default function AdsHeader({ phone, phoneDisplay }: AdsHeaderProps) {
     <header className="bg-brand text-white py-3 px-4">
       <div className="max-w-4xl mx-auto flex items-center justify-between">
         <Image
-          src="/logo.webp" unoptimized
+          src="/logo.webp"
           alt="ChimmerJim"
           width={140}
           height={37}
